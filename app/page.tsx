@@ -3,22 +3,34 @@
     <div className="min-h-screen bg-slate-50 font-sans overflow-x-hidden">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
           <div className="shrink-0">
             <h1 className="text-lg font-bold text-slate-800 tracking-tight leading-tight">Abogados de Extranjería</h1>
             <p className="text-xs text-slate-400 uppercase tracking-widest font-light hidden sm:block">Especialistas en Derecho Migratorio</p>
           </div>
-          <nav>
-            <ul className="flex items-center gap-4 sm:gap-6 whitespace-nowrap text-sm">
+
+          {/* Desktop nav */}
+          <nav className="hidden md:block">
+            <ul className="flex items-center gap-6 whitespace-nowrap text-sm">
               <li><a href="#inicio" className="text-slate-600 hover:text-slate-900 transition-colors">Inicio</a></li>
-              <li><a href="#servicios" className="text-slate-600 hover:text-slate-900 transition-colors hidden md:inline">Servicios</a></li>
+              <li><a href="#servicios" className="text-slate-600 hover:text-slate-900 transition-colors">Servicios</a></li>
               <li><a href="#documentacion" className="text-slate-600 hover:text-slate-900 transition-colors">Documentación</a></li>
-              <li><a href="#sobre-nosotros" className="text-slate-600 hover:text-slate-900 transition-colors hidden md:inline">El Despacho</a></li>
-              <li><a href="#ubicacion" className="text-slate-600 hover:text-slate-900 transition-colors hidden md:inline">Ubicación</a></li>
-              <li><a href="/login" className="text-slate-600 hover:text-slate-900 transition-colors hidden md:inline text-xs border border-gray-300 px-3 py-1.5 rounded">Área de Clientes</a></li>
-              <li><a href="#contacto" className="bg-slate-800 text-white px-4 py-2 rounded hover:bg-slate-700 transition-colors shrink-0">Consulta Gratuita</a></li>
+              <li><a href="#sobre-nosotros" className="text-slate-600 hover:text-slate-900 transition-colors">El Despacho</a></li>
+              <li><a href="#ubicacion" className="text-slate-600 hover:text-slate-900 transition-colors">Ubicación</a></li>
+              <li><a href="/login" className="text-slate-600 hover:text-slate-900 transition-colors text-xs border border-gray-300 px-3 py-1.5 rounded">Área de Clientes</a></li>
+              <li><a href="#contacto" className="bg-slate-800 text-white px-4 py-2 rounded hover:bg-slate-700 transition-colors">Consulta Gratuita</a></li>
             </ul>
           </nav>
+
+          {/* Mobile nav */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a href="/login" className="text-xs border border-gray-300 text-slate-600 px-3 py-1.5 rounded hover:border-slate-500 transition-colors whitespace-nowrap">
+              Área de Clientes
+            </a>
+            <a href="#contacto" className="bg-slate-800 text-white text-xs px-3 py-1.5 rounded hover:bg-slate-700 transition-colors whitespace-nowrap">
+              Consulta
+            </a>
+          </div>
         </div>
       </header>
 
