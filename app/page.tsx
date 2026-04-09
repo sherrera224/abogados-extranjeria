@@ -45,7 +45,7 @@ export default function Home() {
             <a href="#documentacion" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Documentación</a>
             <a href="#sobre-nosotros" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">El Despacho</a>
             <a href="#ubicacion" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Ubicación</a>
-            <a href="/login" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Área de Clientes</a>
+            <a href="/login" onClick={() => setMenuOpen(false)} className="border border-slate-400 text-slate-700 text-center py-2 rounded font-medium">Área de Clientes</a>
             <a href="#contacto" onClick={() => setMenuOpen(false)} className="bg-slate-800 text-white text-center py-2 rounded">Consulta Gratuita</a>
           </div>
         )}
@@ -226,10 +226,10 @@ export default function Home() {
           <div className="bg-white p-6 sm:p-10 rounded-lg border border-gray-100 shadow-sm">
             <form className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Nombre completo" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors" />
-                <input type="tel" placeholder="Teléfono" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors" />
+                <input type="text" placeholder="Nombre completo" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500" />
+                <input type="tel" placeholder="Teléfono" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500" />
               </div>
-              <input type="email" placeholder="Correo electrónico" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors" />
+              <input type="email" placeholder="Correo electrónico" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500" />
               <select className="w-full p-3 border border-gray-200 rounded text-sm text-slate-500 outline-none focus:border-slate-400 transition-colors bg-white">
                 <option value="">Tipo de consulta</option>
                 <option value="regularizacion-extraordinaria">Regularización Extraordinaria (nueva ley)</option>
@@ -238,7 +238,7 @@ export default function Home() {
                 <option value="visado">Visado</option>
                 <option value="otro">Otro</option>
               </select>
-              <textarea placeholder="Describa brevemente su situación" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors" rows={4}></textarea>
+              <textarea placeholder="Describa brevemente su situación" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500" rows={4}></textarea>
               <button type="submit" className="w-full bg-slate-800 text-white py-3 rounded font-semibold hover:bg-slate-700 transition-colors text-sm">Enviar Solicitud</button>
             </form>
           </div>

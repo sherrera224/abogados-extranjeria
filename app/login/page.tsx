@@ -122,7 +122,7 @@ export default function LoginPage() {
                       value={nombre}
                       onChange={(e) => setNombre(e.target.value)}
                       placeholder="Carlos"
-                      className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors"
+                      className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500"
                     />
                   </div>
                   <div>
@@ -135,7 +135,7 @@ export default function LoginPage() {
                       value={apellidos}
                       onChange={(e) => setApellidos(e.target.value)}
                       placeholder="García López"
-                      className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors"
+                      className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500"
                     />
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function LoginPage() {
                     value={telefono}
                     onChange={(e) => setTelefono(e.target.value)}
                     placeholder="+34 600 000 000"
-                    className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors"
+                    className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500"
                   />
                 </div>
               )}
@@ -167,7 +167,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="su@email.com"
-                  className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors"
+                  className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500"
                 />
               </div>
 
@@ -182,7 +182,7 @@ export default function LoginPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
-                    className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors"
+                    className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500"
                   />
                 </div>
               )}
@@ -198,7 +198,7 @@ export default function LoginPage() {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="••••••••"
-                    className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors"
+                    className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-slate-400 transition-colors placeholder:text-slate-500"
                   />
                 </div>
               )}
