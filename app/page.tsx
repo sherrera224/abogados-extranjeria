@@ -1,4 +1,8 @@
-﻿export default function Home() {
+﻿"use client";
+import { useState } from "react";
+
+export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 font-sans overflow-x-hidden">
       {/* Header */}
@@ -22,16 +26,29 @@
             </ul>
           </nav>
 
-          {/* Mobile nav */}
-          <div className="flex items-center gap-2 md:hidden">
-            <a href="/login" className="text-xs border border-gray-300 text-slate-600 px-3 py-1.5 rounded hover:border-slate-500 transition-colors whitespace-nowrap">
-              Área de Clientes
-            </a>
-            <a href="#contacto" className="bg-slate-800 text-white text-xs px-3 py-1.5 rounded hover:bg-slate-700 transition-colors whitespace-nowrap">
-              Consulta
-            </a>
-          </div>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Abrir menú"
+          >
+            <span className={`block w-6 h-0.5 bg-slate-700 transition-transform duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-slate-700 transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-slate-700 transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </button>
         </div>
+        {/* Mobile dropdown menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 px-4 py-3 flex flex-col gap-3">
+            <a href="#inicio" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Inicio</a>
+            <a href="#servicios" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Servicios</a>
+            <a href="#documentacion" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Documentación</a>
+            <a href="#sobre-nosotros" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">El Despacho</a>
+            <a href="#ubicacion" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Ubicación</a>
+            <a href="/login" onClick={() => setMenuOpen(false)} className="text-slate-700 py-2 border-b border-gray-100">Área de Clientes</a>
+            <a href="#contacto" onClick={() => setMenuOpen(false)} className="bg-slate-800 text-white text-center py-2 rounded">Consulta Gratuita</a>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
