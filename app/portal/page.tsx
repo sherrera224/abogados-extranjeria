@@ -170,12 +170,13 @@ function DocRow({
           type="file"
           className="hidden"
           accept=".pdf,.jpg,.jpeg,.png,.webp"
+          multiple
           disabled={uploading}
           onChange={(e) => {
-            const file = e.target.files?.[0];
-            if (file) {
+            const files = Array.from(e.target.files || []);
+            if (files.length > 0) {
               setUploading(true);
-              startUpload([file]);
+              startUpload(files);
             }
           }}
         />
